@@ -1,14 +1,15 @@
-var todaysDate = document.getElementById("todaysDate")
-var todaysTime = document.getElementById("todaysTime") 
+var currentDay = document.getElementById("currentDay")
+var currentTime = document.getElementById("currentTime")
+var theDay = moment().format('dddd');  
 var rightNow = moment().format('LL');
 var theTime = moment().format('LT');
 
-var todaysHour = theTime.split(":")[0]
+var timeSplit = theTime.split(":")[0]
 
-var everyhour = ["9","10","11","12","1","2","3","4","5"]
+var everyHour = ["9","10","11","12","1","2","3","4","5"]
 
-todaysDate.textContent = rightNow
-todaysTime.textContent = theTime
+currentDay.textContent = rightNow
+currentTime.textContent = theTime
 
 var nine = $("#9AM")
 var ten = $("#10AM")
@@ -33,3 +34,24 @@ $(".saveBtn").on("click", function(event){
     for (var i = 0; i < scheduleSubmits.length; i++){
         scheduleSubmits[i].val(localStorage.getItem(scheduleSubmits[i].attr("id")))
     }
+    
+    function colors (){
+        var currentTimeSlot = false;
+        for (var i = 0; i < everyHour.length; i++){
+            if (timeSplit !== everyHour[i] && currentTimeSlot === true){
+                document.getElementById(everyHour[i]).firstElementChild.nextElementSibling.className += " later"
+            }
+            else if (timeSplit === everyHour[i]){
+                currentTimeSlot = true;
+                document.getElementById(everyHour[i]).firstElementChild.nextElementSibling.className += " now"
+            }
+            else {
+                document.getElementById(everyHour[i]).firstElementChild.nextElementSibling.className += " earlier"
+            }
+        }
+    }
+    colors ()
+    
+
+
+

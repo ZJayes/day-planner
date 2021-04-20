@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,91 +18,81 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel=stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+    <title>Day Planner</title>
+  </head>
+
+  <body>
     <header class="jumbotron">
         <h1 class="display-3">Day Planner</h1>
         <h3 class="lead">A Day Planner to schedule your day.</h3>
-        <p id="todaysDate" ></p>
-        <p id="todaysTime" ></p>
-      </header>
+      <p id="currentDay" ></p>
+      <p id="currentTime" ></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <div id="9" class="row">
+        <div class="col-2 mt-4 time-block" id="time">9:00 AM</div>
+        <textarea id= "9AM" class="col-8"></textarea>
+        <button  id= "btn" type="button" class="saveBtn">Save</button>
+    </div>
 
-      <div class="container">
-
-        <div id="9" class="row">
-            <div class="col-2 mt-4 time-block" id="time">9:00 AM</div>
-            <textarea id= "9AM" class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="10" class="row">
-            <div class="col-2 mt-4 time-block" id="time">10:00 AM</div>
-            <textarea id= "10AM" class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="11" class="row">
-            <div class="col-2 mt-4 time-block" id="time">11:00 AM</div>
-            <textarea id= "11AM"class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="12" class="row">
-            <div class="col-2 mt-4 time-block" id="time">12:00 PM</div>
-            <textarea  id= "12PM"class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="1" class="row">
-            <div class="col-2 mt-4 time-block" id="time">1:00 PM</div>
-            <textarea  id= "1PM" class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="2" class="row">
-            <div class="col-2 mt-4 time-block" id="time">2:00 PM</div>
-            <textarea  id= "2PM" class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="3" class="row">
-            <div class="col-2 mt-4 time-block" id="time">3:00 PM</div>
-            <textarea  class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="4" class="row">
-            <div class="col-2 mt-4 time-block" id="time">4:00 PM</div>
-            <textarea id= "4PM"class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-        <div id="5" class="row">
-            <div class="col-2 mt-4 time-block" id="time">5:00 PM</div>
-            <textarea id= "5PM" class="col-8"></textarea>
-            <button  id= "btn" type="button" class="saveBtn">Save</button>
-        </div>
-
-
+      <div id="10" class="row">
+        <div class="col-2 mt-4 time-block" id="time">10:00 AM</div>
+        <textarea id= "10AM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
       </div>
 
+      <div id="11" class="row">
+        <div class="col-2 mt-4 time-block" id="time">11:00 AM</div>
+        <textarea id= "11AM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="12" class="row">
+        <div class="col-2 mt-4 time-block" id="time">12:00 PM</div>
+        <textarea id= "12PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="1" class="row">
+        <div class="col-2 mt-4 time-block" id="time">1:00 PM</div>
+        <textarea id= "1PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="2" class="row">
+        <div class="col-2 mt-4 time-block" id="time">2:00 PM</div>
+        <textarea id= "2PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="3" class="row">
+        <div class="col-2 mt-4 time-block" id="time">3:00 PM</div>
+        <textarea id= "3PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="4" class="row">
+        <div class="col-2 mt-4 time-block" id="time">4:00 PM</div>
+        <textarea id= "4PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>
 
+      <div id="5" class="row">
+        <div class="col-2 mt-4 time-block" id="time">5:00 PM</div>
+        <textarea id= "5PM"  class="col-8"></textarea>
+        <button type="button" class="saveBtn">Save</button>
+      </div>    
+      
 
+    </div>
 
-
-
-
-
-
-
-
-
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
